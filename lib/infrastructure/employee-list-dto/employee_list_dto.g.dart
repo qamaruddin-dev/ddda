@@ -34,8 +34,8 @@ _$_EmployeeData _$$_EmployeeDataFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_EmployeeDataToJson(_$_EmployeeData instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'employee_name': instance.employeeName,
-      'employee_salary': instance.employeeSalary,
-      'employee_age': instance.employeeAge,
-      'profile_image': instance.profileImage,
+      'employeeName': instance.employeeName,
+      'employeeSalary': instance.employeeSalary,
+      'employeeAge': instance.employeeAge,
+      'profileImage': instance.profileImage,
     };
