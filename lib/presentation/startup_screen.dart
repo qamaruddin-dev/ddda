@@ -1,4 +1,5 @@
 import 'package:ddda/application/employee_list_cubit.dart';
+import 'package:ddda/application/enums.dart';
 import 'package:ddda/presentation/employee_list/employee_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -52,9 +53,8 @@ class StartUpScreen extends StatelessWidget {
                               backgroundColor: ThemeColors.themeBlue,
                             ),
                             onPressed: () {
-                              context
-                                  .read<EmployeeListCubit>()
-                                  .getEmployeesData();
+                              BlocProvider.of<EmployeeListCubit>(context)
+                                  .add(EmployeeEvents.fetchEmployees);
 
                               Navigator.of(context).pushReplacementNamed(
                                   EmployeeListScreen.routeName);
